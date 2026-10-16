@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tayyab Shahid — AI/ML Engineer</title>
+<meta name="description" content="Portfolio of Tayyab Shahid — AI/ML Engineer building Generative AI, RAG pipelines and computer vision systems in Lahore, Pakistan.">
+<meta name="theme-color" content="#F8FAFC">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="og-image.png">
+
+<!-- Social preview (WhatsApp / LinkedIn / X) -->
+<!-- After deploying, replace the base URL below if your site lives somewhere else -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tayyabshahid029021.github.io/">
+<meta property="og:title" content="Tayyab Shahid — AI/ML Engineer">
+<meta property="og:description" content="Generative AI, RAG pipelines and computer vision — built end-to-end and shipped as working apps.">
+<meta property="og:image" content="https://tayyabshahid029021.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tayyab Shahid — AI/ML Engineer">
+<meta name="twitter:description" content="Generative AI, RAG pipelines and computer vision — built end-to-end and shipped as working apps.">
+<meta name="twitter:image" content="https://tayyabshahid029021.github.io/og-image.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ambient moving dot field (whole page background) -->
+<canvas id="dot-field" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="nav-outer">
+    <div class="nav-pill brand-pill">
+      <a href="#hero" class="brand"><span class="logo">&lt;/&gt;</span> TS</a>
+    </div>
+    <div class="nav-pill links-pill">
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="Tayyab_Shahid_Resume.pdf" download class="nav-cta">↓ Resume</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile drop-down -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <h1>Hi, I'm Tayyab ... I build <span class="accent">intelligent software.</span></h1>
+      <div class="kicker"><span id="role-type"></span><span class="type-caret"></span></div>
+      <p class="desc">Computer Science graduate and AI Engineer based in Lahore, Pakistan. I build Generative AI and RAG systems, train computer vision and deep learning models, and deploy them as interactive apps that run in real time.</p>
+      <div class="cta-row">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b data-count="1">0</b><span>Year hands-on ML/AI</span></div>
+        <div class="stat"><b data-count="8">0</b><span>Projects shipped</span></div>
+        <div class="stat"><b data-count="72">0</b><span>% FYP model accuracy</span></div>
+      </div>
+      <div class="scroll-tag"><span class="arrow">↓</span> scroll</div>
+    </div>
+
+    <div class="term-stage reveal in">
+      <div class="float-pill pill-1"><span class="ico" style="background:#306998;">Py</span>Python</div>
+      <div class="float-pill pill-2"><span class="ico" style="background:#1C3C3C;">Lc</span>LangChain</div>
+      <div class="float-pill pill-3"><span class="ico" style="background:#FF4B4B;">St</span>Streamlit</div>
+
+      <div class="term">
+        <div class="term-bar">
+          <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+          <span class="path">tayyab.sh — zsh</span>
+        </div>
+        <div class="term-body">
+          <div class="row"><span class="prompt">tayyab@portfolio</span> <span class="cmd">~ % whoami</span>
+            <span class="out">Tayyab Shahid — AI/ML Engineer</span>
+          </div>
+          <div class="row"><span class="prompt">tayyab@portfolio</span> <span class="cmd">~ % cat role.json</span>
+            <span class="out">{ <span class="key">"focus"</span>: <span class="val">"GenAI + RAG"</span>, <span class="key">"based_in"</span>: <span class="val">"Lahore, PK"</span> }</span>
+          </div>
+          <div class="row"><span class="prompt">tayyab@portfolio</span> <span class="cmd">~ % ./run_project.sh --latest</span>
+            <span class="out"><span class="ok">✓</span> Building DocChat — PDF Q&amp;A RAG system...</span>
+            <span class="out"><span class="ok">✓</span> Talking Hands — 72% val. accuracy</span>
+            <span class="out"><span class="ok">✓</span> 8/8 projects deployed</span>
+          </div>
+          <div class="row"><span class="prompt">tayyab@portfolio</span> <span class="cmd">~ % </span><span id="typed-line" class="out"></span><span class="term-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee" id="marquee">
+      <span>Python <b>·</b></span><span>PyTorch <b>·</b></span><span>LangChain <b>·</b></span><span>ChromaDB <b>·</b></span><span>LLaMA <b>·</b></span>
+      <span>YOLO <b>·</b></span><span>Scikit-learn <b>·</b></span><span>OpenCV <b>·</b></span><span>MediaPipe <b>·</b></span><span>Streamlit <b>·</b></span>
+      <span>Hugging Face <b>·</b></span><span>Pandas <b>·</b></span><span>NLTK <b>·</b></span><span>Git <b>·</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2 class="title">The engineer behind the pipeline</h2>
+      <p>I'm a <strong>Computer Science graduate</strong> from the University of Education, Lahore, with a year of hands-on experience building and deploying Machine Learning and Generative AI projects. My work covers the full ML pipeline: data preprocessing, model training and evaluation, and shipping the result as a working web app.</p>
+      <p>I currently work as an <strong>AI Engineer</strong>, building RAG-based pipelines with LangChain, ChromaDB and Hugging Face, and developing computer vision and deep learning models that run inference in real time.</p>
+      <p>My Final Year Project, <strong>Talking Hands</strong>, is an AI sign language recognition system that translates gestures into speech in English and Urdu — built with MediaPipe Holistic and an LSTM trained on the WLASL dataset.</p>
+    </div>
+    <div class="mini-stats reveal">
+      <div class="mini-card"><b data-count="1">0</b><span>year of ML/AI experience</span></div>
+      <div class="mini-card"><b data-count="8">0</b><span>projects delivered</span></div>
+      <div class="mini-card"><b data-count="97">0</b><span>% best classifier accuracy</span></div>
+      <div class="mini-card"><b data-count="387">0</b><span>landmarks tracked per frame</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE + EDUCATION ============ -->
+<section id="experience" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow reveal">Experience</div>
+    <h2 class="title reveal">Work experience</h2>
+    <p class="lede reveal">Currently building ML pipelines and Generative AI systems in a production setting.</p>
+
+    <div style="margin-top:30px;">
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="badge">#techabout26</span><br>
+          <span class="loc">2026 · Lahore, PK</span>
+        </div>
+        <div>
+          <div class="exp-role">AI Engineer</div>
+          <div class="exp-org">TechAbout Private Limited · Jul 2026 – Present</div>
+          <p class="exp-desc">Building and deploying Machine Learning and Generative AI solutions, including RAG-based pipelines using LangChain, ChromaDB and Hugging Face Transformers. Also developing computer vision and deep learning models with OpenCV, MediaPipe, CNN and LSTM, and integrating them into interactive Streamlit applications for real-time inference.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="badge">#ai-intern</span><br>
+          <span class="loc">2026 · Lahore, PK</span>
+        </div>
+        <div>
+          <div class="exp-role">Artificial Intelligence Intern</div>
+          <div class="exp-org">AI Internship · Jun 2026 – Jul 2026 (1 Month)</div>
+          <p class="exp-desc">Built and deployed AI and Computer Vision applications. Developed an intelligent Language Translator using NLP and sequence models, and implemented real-time Object Detection systems using OpenCV and deep learning algorithms, covering dataset annotation, model training, and performance evaluation.</p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="badge">#devhub-remote</span><br>
+          <span class="loc">2026 · Remote</span>
+        </div>
+        <div>
+          <div class="exp-role">Machine Learning &amp; AI Intern</div>
+          <div class="exp-org">DevelopersHub Corporation · May 2026 – Jun 2026 (6 Weeks)</div>
+          <p class="exp-desc">Completed a 6-week intensive remote internship focusing on core Machine Learning and Data Science workflows. Performed exploratory data analysis (EDA), feature engineering, and model training for predictive AI pipelines while collaborating in a remote agile engineering environment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:60px;">
+      <div class="eyebrow reveal">Education</div>
+      <h2 class="title reveal">Academic background</h2>
+      <div style="margin-top:16px;">
+        <div class="edu-item reveal">
+          <div>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <span class="school">University of Education, Lahore</span>
+          </div>
+          <span class="yrs">2022 – 2026</span>
+        </div>
+        <div class="edu-item reveal">
+          <div>
+            <h3>Intermediate in Computer Studies</h3>
+            <span class="school">Islamia College Railway Road, Lahore</span>
+          </div>
+          <span class="yrs">2019 – 2021</span>
+        </div>
+        <div class="edu-item reveal">
+          <div>
+            <h3>Matriculation in Computer Studies</h3>
+            <span class="school">Islamia School Multan Road, Lahore</span>
+          </div>
+          <span class="yrs">2016 – 2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow reveal">Skills</div>
+    <h2 class="title reveal">What I bring to a project</h2>
+    <p class="lede reveal">Full pipeline coverage — from raw data to a deployed, user-facing application.</p>
+
+    <div class="skills-grid" style="margin-top:36px;">
+      <div class="skill-card reveal">
+        <h3>Machine Learning &amp; Deep Learning</h3>
+        <p>Supervised &amp; unsupervised learning, computer vision, NLP and sequence models trained end-to-end.</p>
+        <div class="tag-row">
+          <span class="tag">Supervised Learning</span><span class="tag">Deep Learning</span><span class="tag">NLP</span>
+          <span class="tag">Computer Vision</span><span class="tag">CNN</span><span class="tag">LSTM</span><span class="tag">SMOTE</span><span class="tag">TF-IDF</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" data-target="88"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Generative AI &amp; LLMs</h3>
+        <p>LLM-powered apps and RAG pipelines, from vector storage to context-aware answers.</p>
+        <div class="tag-row">
+          <span class="tag">Hugging Face</span><span class="tag">LangChain</span><span class="tag">ChromaDB</span>
+          <span class="tag">RAG</span><span class="tag">LLaMA</span><span class="tag">Prompt Engineering</span><span class="tag">Vector DBs</span><span class="tag">Ollama</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" data-target="90"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Languages &amp; Core Libraries</h3>
+        <p>Python-first, with modern AI/ML frameworks, computer vision and deep learning libraries.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">YOLO (v8/v11)</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" data-target="92"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools &amp; Deployment</h3>
+        <p>Turning notebooks into production-ready web apps, with version control and containerization.</p>
+        <div class="tag-row">
+          <span class="tag">Streamlit</span><span class="tag">FastAPI</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span><span class="tag">Jupyter Notebook</span><span class="tag">VS Code</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" data-target="85"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" style="background:var(--bg-soft);">
+  <div class="wrap">
+    <div class="eyebrow reveal">Projects</div>
+    <h2 class="title reveal">Featured projects</h2>
+    <p class="lede reveal">A selection of ML and GenAI systems I've designed, trained and shipped.</p>
+
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="genai">Generative AI</button>
+      <button class="filter-btn" data-filter="ml">Classic ML</button>
+    </div>
+
+    <div class="proj-grid" id="proj-grid">
+      <div class="proj-card reveal" data-cat="genai">
+        <div class="proj-thumb"><img src="images/docchat.png" alt="Screenshot of the DocChat AI app: PDF upload sidebar and question input" loading="lazy"></div>
+        <div class="proj-top"><h3>DocChat — AI PDF Question Answer System</h3><span class="proj-metric">RAG</span></div>
+        <p>A Retrieval-Augmented Generation app that lets users upload PDF documents and ask questions in natural language. LangChain, ChromaDB and LLaMA retrieve the relevant context and generate accurate answers, wrapped in a Streamlit interface.</p>
+        <div class="tag-row"><span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">LLaMA</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/talking-hands.png" alt="Screenshot of the Talking Hands sign language translator interface" loading="lazy"></div>
+        <div class="proj-top"><h3>Talking Hands — AI Sign Language Recognition</h3><span class="proj-metric">72% acc.</span></div>
+        <p>Final Year Project translating hand gestures into speech in both English and Urdu. MediaPipe Holistic captures 387 facial, hand and body landmarks per webcam frame, feeding an LSTM trained on the WLASL dataset — 72% validation accuracy, with responses refined using Hugging Face Transformers.</p>
+        <div class="tag-row"><span class="tag">MediaPipe</span><span class="tag">CNN</span><span class="tag">LSTM</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/fraud-detection.jpg" alt="Illustration of a credit card transaction being scanned for fraud" loading="lazy"></div>
+        <div class="proj-top"><h3>Credit Card Fraud Detection</h3><span class="proj-metric">0.17% fraud rate</span></div>
+        <p>A model that flags fraudulent transactions in a highly imbalanced financial dataset. SMOTE improves minority class representation before training a Logistic Regression classifier, evaluated on Precision-Recall and ROC-AUC with emphasis on reducing false negatives.</p>
+        <div class="tag-row"><span class="tag">Scikit-learn</span><span class="tag">SMOTE</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/spam-classifier.jpg" alt="Illustration of spam emails being flagged on a laptop" loading="lazy"></div>
+        <div class="proj-top"><h3>Spam Email Detection System</h3><span class="proj-metric">97.16% acc.</span></div>
+        <p>An NLP pipeline covering text cleaning, tokenization, stemming and TF-IDF feature extraction, feeding a Naive Bayes classifier. Reached 97.16% accuracy and 99% precision, deployed as a Streamlit web application.</p>
+        <div class="tag-row"><span class="tag">Naive Bayes</span><span class="tag">TF-IDF</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="https://github.com/tayyabshahid029021/Spam-and-Non-spam-detector-" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/house-price.png" alt="Screenshot of the house price predictor app showing sliders and estimated price" loading="lazy"></div>
+        <div class="proj-top"><h3>House Price Prediction System</h3><span class="proj-metric">R² = 0.88</span></div>
+        <p>A regression model estimating residential property prices on the King County Housing dataset. A Gradient Boosting Regressor reached an R² score of 0.88, served through a Streamlit app that predicts prices from user-provided property features.</p>
+        <div class="tag-row"><span class="tag">Gradient Boosting</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+
+      <!-- TEMPLATE PROJECT 6 (Placeholder for future project) -->
+      <div class="proj-card reveal" data-cat="genai">
+        <div class="proj-thumb"><img src="images/placeholder.svg" alt="Project preview screenshot" loading="lazy"></div>
+        <div class="proj-top"><h3>AI / Generative AI Project Title</h3><span class="proj-metric">Accuracy / Metric</span></div>
+        <p>Demo project description. Replace with your own project summary explaining the model architecture (e.g. LLMs, Transformers, RAG), dataset utilized, and the user application interface.</p>
+        <div class="tag-row"><span class="tag">LangChain</span><span class="tag">PyTorch</span><span class="tag">Hugging Face</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+
+      <!-- TEMPLATE PROJECT 7 (Placeholder for future project) -->
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/placeholder.svg" alt="Project preview screenshot" loading="lazy"></div>
+        <div class="proj-top"><h3>Computer Vision &amp; YOLO Detection</h3><span class="proj-metric">Real-time FPS</span></div>
+        <p>Demo project description. Replace with your computer vision project summary detailing object detection/tracking algorithms (YOLOv8/v11, OpenCV), dataset training, and live inference performance.</p>
+        <div class="tag-row"><span class="tag">YOLO</span><span class="tag">OpenCV</span><span class="tag">Python</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+
+      <!-- TEMPLATE PROJECT 8 (Placeholder for future project) -->
+      <div class="proj-card reveal" data-cat="ml">
+        <div class="proj-thumb"><img src="images/placeholder.svg" alt="Project preview screenshot" loading="lazy"></div>
+        <div class="proj-top"><h3>Machine Learning &amp; Deep Learning System</h3><span class="proj-metric">Evaluation Score</span></div>
+        <p>Demo project description. Replace with your machine learning project summary outlining feature engineering, predictive modeling, training metrics, and deployed interactive dashboard.</p>
+        <div class="tag-row"><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span><span class="tag">Pandas</span></div>
+        <div class="proj-links">
+          <a class="code-btn" href="#" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="background:var(--bg-soft);">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2 class="title">Let's build something</h2>
+      <p class="lede">Have a role or project in mind? Send a message below — I usually reply within a day.</p>
+
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/tayyabshahid029021@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Portfolio Message from Tayyab Shahid's Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="field-row">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@company.com">
+          </label>
+        </div>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="Tell me about the role or project..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary form-submit">Send message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+
+      <div class="social-row">
+        <a href="https://github.com/tayyabshahid029021" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tayyab-shahid-359873388/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tayyabshahid029021@gmail.com" target="_blank" rel="noopener">Email</a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-row">
+        <span class="k">Email</span>
+        <a class="v" href="https://mail.google.com/mail/?view=cm&fs=1&to=tayyabshahid029021@gmail.com" target="_blank" rel="noopener">tayyabshahid029021@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="k">Phone</span>
+        <a class="v" href="tel:+923354456243">+92 335 4456243</a>
+      </div>
+      <div class="contact-row">
+        <span class="k">Location</span>
+        <span class="v">Lahore, Pakistan</span>
+      </div>
+      <div class="contact-row">
+        <span class="k">Status</span>
+        <span class="v" style="color:var(--green-pale);">Open to job</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshot lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <p>© Tayyab Shahid. All rights reserved.</p>
+    <p>Built with intent, in Lahore.</p>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
